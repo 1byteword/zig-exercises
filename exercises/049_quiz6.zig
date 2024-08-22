@@ -28,7 +28,7 @@ const Elephant = struct {
     // ---------------------------------------------------
 
     //has trunk
-    pub fn hasTrunk(self: *Elephant) *Elephant {
+    pub fn hasTrunk(self: *Elephant) bool {
         return (self.trunk != null);
     }
 
