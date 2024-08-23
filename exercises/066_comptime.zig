@@ -62,13 +62,13 @@ pub fn main() void {
     // types with specific sizes. The comptime numbers will be
     // coerced (if they'll fit!) into your chosen runtime types.
     // For this it is necessary to specify a size, e.g. 32 bit.
-    var var_int = 12345;
-    var var_float = 987.654;
+    var var_int: u32 = 12345;
+    var var_float: f32 = 987.654;
 
     // We can change what is stored at the areas set aside for
     // "var_int" and "var_float" in the running compiled program.
-    var_int = 54321;
-    var_float = 456.789;
+    var_int = comptime 54321;
+    var_float = comptime 456.789;
 
     print("Mutable: {}, {d:.3}; ", .{ var_int, var_float });
 
